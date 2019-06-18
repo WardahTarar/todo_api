@@ -10,3 +10,7 @@ app.get('/', (req, res) => res.send('Todo API'));
 app.listen(port, function () {
      console.log("Running RestHub on port " + port);
 });
+
+let apiRoutes = require("./api-routes")
+
+app.use('/api', apiRoutes)
